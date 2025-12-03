@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <title>Tienda Glacé</title>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-bottom: 3rem;
+            color: #000000;
+            background-color: #e2ae7e;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            background: #faf9fa;
+            color: #07030e;
+        }
+        
+        .btn-primary{
+            background-color: #8a5b15;
+            border-color: #8a5b15;
+        }
+        .btn-primary:hover {
+            background-color: #553305;
+            border-color: #553305;
+        }
+        
+        .navbar{
+            background-color: #000000 !important;
+        }
+        .navbar-brand img {
+            height: 40px; 
+            width: auto;
+        }
+        .card-body{
+            background: #000000;
+            color: rgb(247, 248, 248);
+            padding: 5%;
+            text-align: left;
+        }
+        .pie{
+            background: #0e0d0d;
+            color: aliceblue;
+            padding: 5%;
+            text-align: center;
+        }
+        .pie a {
+            margin: 0 20px; 
+            color: aliceblue;
+            text-decoration: none; 
+            display: inline-block; 
+        }
+        .card-img-top {
+            height: 500px; 
+            object-fit: cover;
+        }
+        .card-title{
+            text-align: center;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+        .precio-tienda {
+            font-size: 1.4rem; 
+            color: #e4a11c; 
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-family: 'Roboto Slab', serif; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="WhatsApp Image 2025-10-20 at 7.17.38 PM.jpeg" alt="Logotipo Glacé"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="paginaweb.html">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Conocenos.html">Conocenos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+
+        <h1 class="card-title">Helados</h1>
+        <div class="row">
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="napo.jpg" class="card-img-top" alt="Helados Artesanales">
+                    <div class="card-body">
+                        <h2 class="card-text">Helado Napolitano.</h2><br>
+                        <p class="card-text">Puedes hacer las mejores combinaciones</p>
+                        <p class="precio-tienda"><strong>$39.99</strong></p>
+                        <button onclick="agregarAlCarrito('napo001', 39.99, 'Helado Napolitano')" 
+                                class="btn btn-primary btn-block">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="vainilla.jpg" class="card-img-top" alt="Postres de Autor">
+                    <div class="card-body">
+                        <h2 class="card-text">Helado Vainilla Caramelo.</h2><br>
+                        <p class="card-text">El helado mas sencillo pero ahora con mas sabor.</p>
+                        <p class="precio-tienda"><strong>$19.99</strong></p>
+                        <button onclick="agregarAlCarrito('vainilla002', 19.99, 'Helado Vainilla Caramelo')" 
+                                class="btn btn-primary btn-block">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> <hr class="mt-5 mb-4" style="border-top: 2px solid #3b2402;">
+
+        <h1 class="card-title mt-5 mb-4">Postres</h1> 
+        <div class="row"> 
+            
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="crepas.jpg" class="card-img-top" alt="Helados Artesanales">
+                    <div class="card-body">
+                        <h2 class="card-text">Crepas Glacé.</h2>
+                        <p class="card-text">Lo mejor del momento</p>
+                        <p class="precio-tienda"><strong>$49.99</strong></p>
+                        <button onclick="agregarAlCarrito('crepas003', 49.99, 'Crepas Glace')" 
+                                class="btn btn-primary btn-block">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="cupcake.jpg" class="card-img-top" alt="Postres de Autor">
+                    <div class="card-body">
+                        <h2 class="card-text">Volcan de chocolate</h2>
+                        <p class="card-text">Lo mas delicioso que puedes obtener.</p>
+                        <p class="precio-tienda"><strong>$49.99 USD</strong></p>
+                        <button onclick="agregarAlCarrito('volcan004', 49.99, 'Volcan de chocolate')" 
+                                class="btn btn-primary btn-block">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> <footer class="pie">
+        <a href="#">Avisos</a>
+        <a href="#">Política de reembolso</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de datos</a>
+        <a href="#">Términos y condiciones</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        
+    <script>
+        function agregarAlCarrito(productoId, precio, nombre) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || {}
+            if (carrito[productoId]) {
+                carrito[productoId].cantidad += 1;
+            } else {
+                carrito[productoId] = {
+                    id: productoId,
+                    precio: precio,
+                    cantidad: 1,
+                    nombre: nombre 
+                };
+            }
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            window.location.href = 'carrito.html';
+        }
+    </script>
+</body>
+</html>

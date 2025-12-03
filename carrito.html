@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>Carrito de Compras - Glacé</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding-bottom: 7rem;
+            color: #000000;
+            background-color: #e2ae7e;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+        .navbar {
+            background-color: #000000 !important;
+        }
+        .navbar-brand img {
+            height: 40px; 
+            width: auto;
+        }
+        .titulo-carrito {
+            font-family: 'Roboto Slab', serif;
+            color: #3b2402;
+            border-bottom: 3px solid #3b2402;
+            padding-bottom: 10px;
+        }
+        .table-dark {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .table-dark thead th {
+            border-bottom: 0; 
+            color: #e2ae7e;
+        }
+        .form-control-sm {
+            text-align: center;
+        }
+        .resumen-titulo {
+            font-family: 'Roboto Slab', serif;
+            color: #3b2402;
+            margin-bottom: 15px;
+        }
+        .btn-success {
+            background-color: #28a745; 
+            border-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #1e7e34;
+            border-color: #1e7e34;
+        }
+        
+        .list-group-item {
+            border-color: rgba(0, 0, 0, 0.125);
+        }
+        
+        .total-final {
+            background-color: #3b2402 !important;
+            color: #ffffff !important;
+            font-size: 1.2rem;
+        }
+        .pie{
+            background: #0e0d0d;
+            color: aliceblue;
+            padding: 20px;
+            text-align: center;
+            position: fixed; 
+            bottom: 0;
+            width: 100%;
+            z-index: 1000; 
+        }
+        .pie a {
+            margin: 0 15px; 
+            color: aliceblue;
+            text-decoration: none; 
+            display: inline-block; 
+        }
+        .pie a:hover {
+            text-decoration: underline;
+            color: #e2ae7e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="WhatsApp Image 2025-10-20 at 7.17.38 PM.jpeg" alt="Logotipo Glacé"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="paginaweb.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Conocenos.html">Conocenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container my-5">
+        <h1 class="text-center mb-5 titulo-carrito"> Tu Carrito de Compras</h1>
+        <hr>
+
+        <div class="row">
+            
+            <div class="col-md-7 mb-4">
+                <table class="table table-bordered table-striped table-dark">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Producto</th>
+                            <th class="text-right">Precio Unitario</th>
+                            <th class="text-center">Cantidad</th>
+                            <th class="text-right">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-carrito">
+                        </tbody>
+                </table>
+            </div>
+            
+            <div class="col-md-5 mb-4">
+                <h4 class="resumen-titulo">Resumen del Pedido</h4>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between">
+                        Subtotal de productos: <span id="subtotal-general">$0.00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        Costo de Envío: <span>$10.00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between total-final">
+                        <strong>Total a Pagar:</strong> <strong id="total-final">$10.00</strong>
+                    </li>
+                </ul>
+                
+                <div class="mt-4">
+                    <a href="Formulario.html" class="btn btn-success btn-lg btn-block">Proceder al Pago</a>
+                    <a href="Tienda.html" class="btn btn-secondary btn-block mt-2">Seguir Comprando</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer class="pie">
+        <a href="#">Avisos</a>
+        <a href="#">Política de reembolso</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de datos</a>
+        <a href="#">Términos y condiciones</a>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const COSTO_ENVIO = 10.00; 
+
+
+        function cargarCarrito() {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+            const cuerpoTabla = document.getElementById('cuerpo-carrito');
+            cuerpoTabla.innerHTML = ''; 
+            let subtotalGeneral = 0;
+            for (const id in carrito) {
+                const item = carrito[id];
+                
+                const subtotalItem = item.cantidad * item.precio;
+                subtotalGeneral += subtotalItem;
+                const fila = `
+                    <tr>
+                        <td><h5>${item.nombre}</h5></td>
+                        <td class="text-right">$${item.precio.toFixed(2)}</td>
+                        <td class="text-center">
+                            <input type="number" value="${item.cantidad}" min="0" class="form-control form-control-sm"
+                                onchange="actualizarCantidad('${id}', this.value)">
+                        </td>
+                        <td class="text-right"><strong>$${subtotalItem.toFixed(2)}</strong></td>
+                    </tr>
+                `;
+                cuerpoTabla.innerHTML += fila;
+                }
+            const totalConEnvio = subtotalGeneral + COSTO_ENVIO;
+            document.getElementById('subtotal-general').innerText = `$${subtotalGeneral.toFixed(2)}`;
+            document.getElementById('total-final').innerHTML = `<strong>$${totalConEnvio.toFixed(2)}</strong>`;
+            if (subtotalGeneral === 0) {
+                cuerpoTabla.innerHTML = '<tr><td colspan="4" class="text-center">¡Tu carrito está vacío! Vuelve a la <a href="Menu.html">tienda</a> para agregar productos.</td></tr>';
+                document.getElementById('total-final').innerHTML = '<strong>$' + COSTO_ENVIO.toFixed(2) + '</strong>'; // Solo muestra el costo de envío
+            }
+        }
+        function actualizarCantidad(id, nuevaCantidad) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+            const cantidad = parseInt(nuevaCantidad);
+
+            if (cantidad > 0) {
+                carrito[id].cantidad = cantidad;
+            } else {
+                delete carrito[id];
+            }
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            cargarCarrito(); 
+        }
+        window.onload = cargarCarrito;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    
+    <title>¡Compra Finalizada! - Glacé</title>
+</head>
+
+<body>
+    
+    <div class="container-fluid confirmacion-container">
+        <div class="card p-5 shadow-lg confirmacion-card">
+            <div class="mensaje-principal">
+                <h1 class="display-3 text-center">🎉 ¡Gracias por tu compra!</h1>
+                
+                <div class="text-center mb-4">
+                    <span class="icono-exito">✔</span>
+                </div>
+    
+                <h2 class="text-center pedido-recibido">Pedido Recibido Exitosamente.</h2>
+                <p class="lead text-center mt-3">
+                Tu orden ha sido procesada y será preparada por nuestro equipo Glacé.
+                <br>
+                Hemos enviado la confirmación a: <span id="email-cliente" style="font-weight: bold; color: #FFD700;">[CORREO AQUÍ]</span>
+                </p>
+                
+                <div class="text-center mt-5">
+                    <a href="paginaweb.html" class="btn btn-volver btn-lg">Volver a la Página de Inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const correoGuardado = localStorage.getItem('correoCliente');
+        const elementoCorreo = document.getElementById('email-cliente');
+        if (elementoCorreo && correoGuardado) {
+            elementoCorreo.textContent = correoGuardado;
+        } else if (elementoCorreo) {
+            elementoCorreo.textContent = 'la dirección de email proporcionada.';
+        }
+    });
+</script>
+    <style>
+        body {
+            background-color: #f7e1c8; 
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto Slab', serif;
+        }
+        .confirmacion-container {
+            min-height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .confirmacion-card {
+            max-width: 650px; 
+            margin: 0 auto; 
+            background-color: #fff;
+            border-radius: 15px;
+            border: none; 
+            padding: 0 !important; 
+            overflow: hidden; 
+        }
+        .mensaje-principal {
+            background-color: #8a5b15;
+            color: #ffffff; 
+            padding: 40px; 
+        }
+        .mensaje-principal h1, .mensaje-principal h2 {
+            color: #ffffff; 
+            font-weight: 700;
+        }
+        .mensaje-principal p {
+            color: #f7e1c8; 
+        }
+        .icono-exito {
+            font-size: 7rem; 
+            line-height: 1;
+            display: block;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .btn-volver {
+            background-color: #000000; 
+            border-color: #000000;
+            font-weight: bold;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        .btn-volver:hover {
+            background-color: #3b2402;
+            border-color: #3b2402;
+        }
+    </style>
+</body>
+</html>

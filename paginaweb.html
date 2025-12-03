@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <title>Diseño responsivo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding-bottom: 3rem;
+      color: #0a0a0a;
+      font-family: 'Roboto', sans-serif;
+    }
+    .h1 {
+    font-family: 'Roboto Slab', serif;;
+    }
+    .navbar, .pie {
+    font-family: 'Roboto', sans-serif; 
+    }
+    img {
+      width: 100%;
+      height: auto;
+      background: #06010e;
+      color: #06010e;
+    }
+    .carousel {
+      margin-bottom: 0 !important;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      z-index: 12; 
+    }
+    .carousel-caption {
+     top: 0;         
+     bottom: 0;      
+     z-index: 10;
+     text-align: center;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+     max-width: 800px;
+     margin: 0 auto;
+     display: flex;                
+     flex-direction: column;
+     justify-content: center;      
+     align-items: center;    
+    }
+    .carousel-item {
+      position: relative; 
+    }
+    .carousel-item::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      z-index: 5; 
+    }
+    .carousel-item > img {
+      width: 100%;
+      height: 32rem;
+      object-fit: cover;
+    }
+    @media (min-width: 40em) {
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+    }
+    .btn-primary{
+      background-color: #5f3b04;
+      border-color: #5f3b04;
+    }
+    .btn-primary:hover {
+    background-color: #553305; 
+    border-color: #553305;
+    }
+    .btn-secundary{
+      background-color: #f8f7f5;
+      border-color: #fafaf9;
+    }
+    .btn-primary:hover {
+    background-color: #adaba7; 
+    border-color: #979694;
+    }
+    .navbar{
+      background-color: #000000 !important;
+    }
+    .navbar-brand img {
+      height: 40px; 
+      width: auto;
+    }
+    .info{
+    background: #e69b55;
+    color: aliceblue;
+    padding: 5%;
+     text-align: center;
+    }
+    .pie{
+     background: #0e0d0d;
+    color: aliceblue;
+    padding: 5%;
+     text-align: center;
+    }
+    .pie a {
+        margin: 0 20px; 
+        color: aliceblue;
+        text-decoration: none; 
+        display: inline-block; 
+    }
+    .pie a:hover {
+        text-decoration: underline;
+        color: #f59d4c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="WhatsApp Image 2025-10-20 at 7.17.38 PM.jpeg" alt="no se encontro"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="paginaweb.html">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Conocenos.html">Conocenos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Tienda.html">Tienda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carrito.html">Carrito</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="650_1200.jpg" alt="no se encontró">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>¿Que me diferencia del resto?</h1><br>
+            <p>En Glacé no solo hacemos helado, creamos experiencias dulces. Ya que combinamos helados artesanales con postres únicos, cuidando cada detalle para que cada bocado sea inolvidable.
+               Aquí no solo disfrutás de un helado , también descubres sabores frescos, originales y de la mejor calidad, acompañados de postres que despiertan tu imaginación.</p><br>
+            <p><a class="btn btn-primary" href="Conocenos.html" role="button">Sobre Glace</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100" src="in.jpg" alt="no se encontró">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Nuestros ingredientes</h1><br>
+            <p>En Glacé usamos ingredientes frescos y naturales , seleccionados cuidadosamente para que cada helado y postre sea una experiencia exquisita. Descubre como combinamos sabores incomparables en cada creación.</p><br><br>
+            <p><a class="btn btn-primary" href="Menu.html" role="button">Ver sabores</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100" src="hp.jpg" alt="no se encontró">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Promociones del mes</h1><br><br>
+            <p>
+Endulza tu día con  nuestras promociones limitadas.
+No esperes mas , ven y disfruta de los sabores que te encantan a precios irresistibles, hechas con ingredientes frescos y naturales. </p><br><br>
+            <p><a class="btn btn-primary" href="Menu.html" role="button">Buscar mas</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+    <div class="info">
+            <p>¡¡SI TIENES ALGUNA SUGERENCIA O IDEA PARA MEJORAR NUESTRA EMPRESA , HAZNOS SABER!!</p>
+            <p><a class="btn btn-secundary" href="https://forms.gle/3esMG5SDweqi29Am6" role="button" target="_blank">Apoyanos aqui</a></p>
+        </div>
+  <footer class="pie">
+        <a href="#">Avisos</a>
+        <a href="#">Política de reembolso</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de datos</a>
+        <a href="#">Términos y condiciones</a>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

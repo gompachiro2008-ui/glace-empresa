@@ -1,0 +1,60 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>Finalizar Compra - Glacé</title>
+    <style>
+        body { background-color: #f7e1c8; font-family: 'Roboto', sans-serif; }
+        h1, h2 { font-family: 'Roboto Slab', serif; color: #3b2402; }
+        .checkout-box { max-width: 500px; margin: 50px auto; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .btn-finalizar { background-color: #8a5b15; border-color: #8a5b15; }
+        .btn-finalizar:hover { background-color: #553305; border-color: #553305; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="checkout-box">
+        <h1 class="text-center mb-4">Paso Final: Tu Información</h1>
+        <p class="text-center text-muted">Ingresa tu correo para recibir la confirmación de tu pedido simulado.</p>
+        
+        <div class="form-group">
+            <label for="emailInput">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="emailInput" placeholder="tu.correo@ejemplo.com" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="metodoPago">Método de Pago (Simulado):</label>
+            <select class="form-control" id="metodoPago">
+                <option>Tarjeta de Crédito / Débito</option>
+                <option>PayPal</option>
+                <option>Pago contra entrega</option>
+            </select>
+        </div>
+        
+        <button onclick="finalizarCompra()" class="btn btn-finalizar btn-lg btn-block mt-4">Pagar $99.98 (Simulado)</button>
+        
+    </div>
+</div>
+
+<script>
+    function finalizarCompra() {
+        const correo = document.getElementById('emailInput').value;
+
+        if (correo === "") {
+            alert("Por favor, ingresa tu correo electrónico.");
+            return; 
+        }
+
+        // 1. Guardar el correo en el almacenamiento local para usarlo después
+        localStorage.setItem('correoCliente', correo);
+
+        // 2. Redirigir a la página de confirmación
+        window.location.href = 'pago-simulado.html';
+    }
+</script>
+</body>
+</html>
